@@ -35,7 +35,9 @@ app.use('/api/posts', postRoutes);
 app.use('/api/follow', followRoutes); 
 
 
-
+app.get('/', (req, res) => {
+  res.send('Welcome to the Social API');
+});
 
 // Error handling
 app.use((err, req, res, next) => {
